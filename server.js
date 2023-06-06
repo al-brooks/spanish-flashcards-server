@@ -14,7 +14,7 @@ app.use(express.json()); // creates req.body
 app.use(morgan("dev"));
 
 // Mount API Routes
-// app.use("/api/users", require("./routes/api/users"));
+app.use("/api/users", require("./routes/api/users"));
 
 const port = process.env.PORT || 3001;
 app.listen(port, () => {
