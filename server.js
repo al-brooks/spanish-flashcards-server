@@ -15,6 +15,7 @@ app.use(morgan("dev"));
 
 // Mount API Routes
 app.use("/api/users", require("./routes/api/users"));
+app.use("/api/translate", require("./routes/api/translations"));
 
 const port = process.env.PORT || 3001;
 app.listen(port, () => {
