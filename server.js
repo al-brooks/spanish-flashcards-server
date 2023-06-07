@@ -1,5 +1,6 @@
 const express = require("express");
 const morgan = require("morgan");
+const cors = require("cors");
 
 const app = express();
 
@@ -11,6 +12,7 @@ require("./config/database");
 
 // AJAX
 app.use(express.json()); // creates req.body
+app.use(cors());
 app.use(morgan("dev"));
 
 // Mount API Routes
