@@ -3,6 +3,6 @@ const router = express.Router();
 const translateCtrl = require("../../controllers/api/translations");
 
 // GET /api/translate/:words
-router.get("/:words", translateCtrl.getTranslation);
+router.get("/:search", translateCtrl.getTranslation);
 
 module.exports = router;

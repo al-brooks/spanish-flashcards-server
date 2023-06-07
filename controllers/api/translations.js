@@ -6,7 +6,7 @@ module.exports = {
 
 async function getTranslation(req, res) {
   try {
-    const reqUrl = `${baseUrl}${req.params.words}?key=${process.env.API_KEY}`;
+    const reqUrl = `${baseUrl}${req.params.search}?key=${process.env.API_KEY}`;
     const response = await fetch(reqUrl);
     const data = await response.json();
     res.send(data);
