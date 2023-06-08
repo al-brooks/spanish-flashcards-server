@@ -10,7 +10,7 @@ async function createDeck(req, res) {
     const deck = await Deck.create({ name: req.body.name });
     deck.users.push(req.user);
     deck.save();
-    res.sendStatus(200);
+    res.json(deck);
   } catch (error) {
     res.status(400).json(error);
   }
