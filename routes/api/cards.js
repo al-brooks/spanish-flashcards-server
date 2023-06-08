@@ -2,8 +2,13 @@ const express = require("express");
 const router = express.Router();
 const cardsCtrl = require("../../controllers/api/cards");
 
-// POST /api/decks/:name/cards/
-router.post("/decks/:name/cards", cardsCtrl.create);
+// GET /api/decks/all/cards
+router.get("/all", cardsCtrl.index);
+
+// POST /api/decks/cards
+router.post("/create", cardsCtrl.create);
 
 // GET /api/decks/:name/cards/:id
-router.get("/decks/:name/cards/:id", cardsCtrl.edit);
+// router.get("/:name/cards/:id", cardsCtrl.edit);
+
+module.exports = router;
