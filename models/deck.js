@@ -26,15 +26,10 @@ const deckSchema = new Schema(
   {
     name: {
       type: String,
+      unique: true,
       required: true
     },
     cards: [cardSchema],
-    folders: [
-      {
-        type: Schema.Types.ObjectId,
-        ref: "Folder"
-      }
-    ],
     users: [
       {
         type: Schema.Types.ObjectId,
