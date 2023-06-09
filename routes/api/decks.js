@@ -9,6 +9,6 @@ router.get("/", decksCtrl.index);
 router.post("/", decksCtrl.create);
 
 // get /api/decks/:id
-router.get("/decks/:id", decksCtrl.show);
+router.get("/:id", decksCtrl.show);
 
 module.exports = router;
