@@ -2,7 +2,8 @@ const Deck = require("../../models/deck");
 
 module.exports = {
   index,
-  create: createDeck
+  create: createDeck,
+  show
 };
 
 // GET /api/decks
@@ -21,6 +22,16 @@ async function createDeck(req, res) {
     const deck = await Deck.create({ name: req.body.name });
     deck.users.push(req.user);
     deck.save();
+    res.json(deck);
+  } catch (error) {
+    res.status(400).json(error);
+  }
+}
+
+// GET /api/decks/:id
+async function show(req, res) {
+  try {
+    const deck = await Deck.findById(req.params.id);
     res.json(deck);
   } catch (error) {
     res.status(400).json(error);
