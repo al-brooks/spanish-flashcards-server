@@ -21,7 +21,7 @@ app.use(morgan("dev"));
 app.use("/api/users", require("./routes/api/users"));
 app.use("/api/translate", require("./routes/api/translations"));
 app.use("/api/decks", require("./routes/api/decks"));
-app.use("/api/decks/cards", require("./routes/api/cards"));
+app.use("/api/decks", require("./routes/api/cards"));
 
 const port = process.env.PORT || 3001;
 app.listen(port, () => {
