@@ -8,7 +8,13 @@ router.get("/", decksCtrl.index);
 // POST /api/decks
 router.post("/", decksCtrl.create);
 
-// get /api/decks/:id
+// GET /api/decks/:id
 router.get("/:id", decksCtrl.show);
+
+// PUT /api/decks/:id
+router.put("/:id", decksCtrl.update);
+
+// DELETE /api/decks/:id
+router.delete("/:id", decksCtrl.delete);
 
 module.exports = router;
