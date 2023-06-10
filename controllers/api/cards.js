@@ -9,8 +9,9 @@ module.exports = {
 // POST /api/decks/:id/cards
 async function createCard(req, res) {
   try {
+    const { content, translation, difficulty } = req.body;
     const deck = await Deck.findById(req.params.d_id);
-    deck.cards.push(req.body); // pull out properties if need be
+    deck.cards.push({ content, translation, difficulty });
     deck.save();
     res.json(deck);
   } catch (error) {
