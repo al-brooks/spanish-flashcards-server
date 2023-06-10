@@ -54,7 +54,7 @@ async function update(req, res) {
 async function deleteDeck(req, res) {
   try {
     const response = await Deck.findByIdAndDelete(req.params.id);
-    if (response) res.sendStatus(200);
+    res.json(response);
   } catch (error) {
     res.status(400).json(error);
   }
