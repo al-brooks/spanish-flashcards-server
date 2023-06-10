@@ -13,7 +13,7 @@ const cardSchema = new Schema(
     },
     difficulty: {
       type: String,
-      enum: ["New Word", "Tough", "Okay", "Easy", "Fluent"],
+      enum: ["New", "Tough", "Okay", "Easy", "Fluent"],
       required: true
     }
   },
