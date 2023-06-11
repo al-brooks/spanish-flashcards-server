@@ -2,6 +2,7 @@ const Deck = require("../../models/deck");
 
 module.exports = {
   create: createCard,
+  show,
   update,
   delete: deleteCard
 };
@@ -14,6 +15,21 @@ async function createCard(req, res) {
     deck.cards.push({ content, translation, difficulty });
     deck.save();
     res.json(deck);
+  } catch (error) {
+    res.status(400).json(error);
+  }
+}
+
+// GET /api/decks/:id/cards/:id
+
+async function show(req, res) {
+  console.log("here");
+  try {
+    const deck = await Deck.findById(req.params.d_id);
+    const card = deck.cards.find(function (card) {
+      return card._id.toString() === req.params.c_id;
+    });
+    res.json(card);
   } catch (error) {
     res.status(400).json(error);
   }
