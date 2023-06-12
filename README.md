@@ -59,6 +59,7 @@ Once you're on the site, you can navigate to our Translation page to test out di
 ## Technologies:
 
 - React.js
+- Node.js
 - MongoDB
 - MongooseJS
 - CSS
