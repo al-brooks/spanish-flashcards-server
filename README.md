@@ -1,7 +1,7 @@
 # SpanishFlash - Level Up Your Spanish Today!
 
 - Project Link: https://spanish-flash.netlify.app/
-- Project Server: https://github.com/al-brooks/spanish-flashcards-client
+- Project Client-side: https://github.com/al-brooks/spanish-flashcards-client
 - Trello Board: https://trello.com/b/btXK5hTZ/learning-spanish-flash-card-app
 
 ## About SpanishFlash:
