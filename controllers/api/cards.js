@@ -23,7 +23,6 @@ async function createCard(req, res) {
 // GET /api/decks/:id/cards/:id
 
 async function show(req, res) {
-  console.log("here");
   try {
     const deck = await Deck.findById(req.params.d_id);
     const card = deck.cards.find(function (card) {
